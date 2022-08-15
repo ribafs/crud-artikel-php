@@ -15,14 +15,6 @@ $artikel = query("SELECT * FROM artikel");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-    </style>
 </head>
 
 <body>
@@ -40,7 +32,7 @@ $artikel = query("SELECT * FROM artikel");
 
     <br>
 
-    <table>
+    <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>#</th>
             <th>Judul</th>
