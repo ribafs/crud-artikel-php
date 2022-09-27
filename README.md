@@ -14,3 +14,8 @@ Silakan jadikan referensi, pelajari logikanya untuk menjamin keamanan website ki
 - Hapus Artikel
 - Daftar Artikel
 - Detail Artikel
+
+## English version
+
+By Ribamar FS - https://github.com/ribafs
+

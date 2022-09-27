@@ -1,14 +1,13 @@
 <?php
 
-require 'proses.php';
+require 'process.php';
 
 $i = 1;
-$artikel = query("SELECT * FROM artikel");
-
+$article = query("SELECT * FROM article");
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -22,42 +21,38 @@ $artikel = query("SELECT * FROM artikel");
     <h1>Home</h1>
 
     <ul>
-        <li><a href="artikel.php">Daftar Artikel</a></li>
+        <li><a href="article.php">List Article</a></li>
     </ul>
 
     <br>
-    <a href="tambah.php">+ Tambah Artikel Baru</a>
+    <a href="add.php">+ Add New Article</a>
     <br>
     <br>
-
     <br>
 
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
-            <th>#</th>
-            <th>Judul</th>
-            <th>Deskripsi</th>
-            <th>Gambar</th>
-            <th>Waktu Upload</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Picture</th>
+            <th>Upload Time</th>
             <th>Detail</th>
             <th>Edit</th>
-            <th>Hapus</th>
+            <th>Happy</th>
         </tr>
-        <?php foreach ($artikel as $a) : ?>
+        <?php foreach ($article as $a) : ?>
             <tr>
                 <td><?= $i++; ?></td>
-                <td><?= $a['judul']; ?></td>
-                <td><?= $a['deskripsi']; ?></td>
-                <td><img style="width: 40px;" src="gambar/<?= $a['gambar']; ?>" alt="<?= $a['judul']; ?>"></td>
-                <td><?= date("d- M - Y", $a['waktu']); ?></td>
-                <td><a href="detail-artikel.php?judul=<?= $a['url']; ?>" type="button">Detail</a></td>
+                <td><?= $a['title']; ?></td>
+                <td><?= $a['description']; ?></td>
+                <td><img style="width: 40px;" src="picture/<?= $a['picture']; ?>" alt="<?= $a['title']; ?>"></td>
+                <td><?= date("d- M - Y", $a['time']); ?></td>
+                <td><a href="detail-article.php?title=<?= $a['url']; ?>" type="button">Detail</a></td>
                 <td><a href="edit.php?id=<?= $a['id']; ?>" type="button">Edit</a></td>
-                <td><a href="hapus.php?id=<?= $a['id']; ?>" type="button">Hapus</a></td>
+                <td><a href="delete.php?id=<?= $a['id']; ?>" type="button">Delete</a></td>
             </tr>
         <?php endforeach; ?>
     </table>
-
-
 </body>
-
 </html>

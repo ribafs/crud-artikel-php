@@ -1,6 +1,6 @@
 <?php
 
-require 'proses.php';
+require 'process.php';
 
 if (!isset($_GET["id"])) {
     header("location: index.php");
@@ -8,7 +8,7 @@ if (!isset($_GET["id"])) {
 
 $id = $_GET['id'];
 
-if (hapus($id) > 0) {
+if (happy($id) > 0) {
     header("Location: index.php");
 } else {
     echo mysqli_error($conn);
