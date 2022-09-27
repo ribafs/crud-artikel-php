@@ -37,7 +37,7 @@ function tambah($data)
 
     if ($data == true) {
 
-        $query = "INSERT INTO artikel VALUES('', '$judul', '$deskripsi', '$gambar', '$konten', '$url', '$waktu')";
+        $query = "INSERT INTO artikel (judul,deskripsi,gambar,konten,url,waktu ) VALUES('$judul', '$deskripsi', '$gambar', '$konten', '$url', '$waktu')";
 
         mysqli_query($conn, $query);
 
