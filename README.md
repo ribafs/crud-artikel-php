@@ -1,5 +1,7 @@
 # CRUD Artikel
 
+Translated from Indonesian to English by Ribamar FS with the help of Google translator
+
 - PHP Dasar
 - PHP Native
 - Form Simpel
@@ -15,7 +17,4 @@ Silakan jadikan referensi, pelajari logikanya untuk menjamin keamanan website ki
 - Daftar Artikel
 - Detail Artikel
 
-## English version
-
-By Ribamar FS - https://github.com/ribafs
 
